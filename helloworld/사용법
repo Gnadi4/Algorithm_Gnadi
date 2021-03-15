@@ -2,3 +2,5 @@ ctl + alt + c 는 실행파일 만들기
 ctl + alt + r 은 실행파일 실행
 F5 는 디버깅
 F11 도 디버깅
+
+git push -u origin master
