@@ -3,8 +3,8 @@ ctl + alt + r 은 실행파일 실행
 F5 는 디버깅
 F11 도 디버깅
 
-git push -u origin master
+push 하는 방법
+- git push -u origin master
 
-Today is here!
-
-여기서도 되는건가??
+pull 하는 방법
+- git pull origin gnadi
