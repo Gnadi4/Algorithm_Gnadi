@@ -9,4 +9,8 @@ push 하는 방법
 pull 하는 방법
 - git pull origin gnadi
 
+// 빠른 입출력
+cin.tie(0);
+ios::sync_with_stdio(false);
+
 **** 소인수분해 관련 공부 다시할것 -> pe3
