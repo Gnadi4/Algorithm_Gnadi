@@ -5,7 +5,7 @@ using namespace std;
 int check[10]={0,};
 
 //시계 상황
-int clock[16]={0,};
+int clo[16]={0,};
 
 const int sw[10][5]={{0,1,2,-1,-1},{3,7,9,11,-1},{4,10,14,15,-1},{0,4,5,6,7},{6,7,8,10,12},{0, 2, 14, 15,-1},{3, 14, 15,-1,-1},{4, 5, 7, 14, 15},{1, 2, 3, 4, 5},{3, 4, 5, 9, 13}};
 
@@ -19,7 +19,7 @@ void proc(int n, int s){
     // }
     if(result<=n)return;
     for(int i=0; i<16; i++){
-        if(clock[i]!=12){
+        if(clo[i]!=12){
             check_tmp = false;
             break;
         }
@@ -58,9 +58,9 @@ void proc(int n, int s){
             int a[5]={0,};
             for(int j=0; j<5; j++){
                 if(sw[s][j]!=-1){
-                    a[j]=clock[sw[s][j]];
-                    clock[sw[s][j]]=(clock[sw[s][j]]+3*i)%12;
-                    if(clock[sw[s][j]]==0)clock[sw[s][j]]=12;
+                    a[j]=clo[sw[s][j]];
+                    clo[sw[s][j]]=(clo[sw[s][j]]+3*i)%12;
+                    if(clo[sw[s][j]]==0)clo[sw[s][j]]=12;
                 }
                 // if(sw[s][j]!=-1){
                 //     if(clock[sw[s][j]]==9)clock[sw[s][j]]=12;
@@ -68,7 +68,8 @@ void proc(int n, int s){
                 // }
             }
             //check[s]+=1;
-            proc(n+1,s+1);
+            proc(n+i,s+1);
+            //if(s==8)cout<<n<<endl;
             //check[s]-=1;
             // for(int j=0; j<5; j++){
             //     if(sw[s][j]!=-1){
@@ -77,7 +78,7 @@ void proc(int n, int s){
             //     }
             // }
             for(int j=0; j<5; j++){
-                if(a[j]!=0)clock[sw[s][j]]=a[j];
+                if(a[j]!=0)clo[sw[s][j]]=a[j];
             }
         }
     }
@@ -92,7 +93,7 @@ int main(){
 
     for(int test=0; test<T; test++){
         for(int i=0; i<16; i++){
-            cin>>clock[i];
+            cin>>clo[i];
         }
 
         proc(0,0);
