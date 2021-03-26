@@ -52,7 +52,7 @@ void gna(int n, int c, int s){
 
     for(int i=s; i<n; i++){
         check[i] = 1;
-        gna(n,c+1,s+1);
+        gna(n,c+1,i+1);
         check[i] = 0;
     }
     return;
