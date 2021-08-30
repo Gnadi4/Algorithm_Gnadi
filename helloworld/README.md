@@ -4,7 +4,7 @@ F5 는 디버깅
 F11 도 디버깅
 
 push 하는 방법
-- git push -u origin master
+- git push -u origin
 
 pull 하는 방법
 - git pull origin gnadi
