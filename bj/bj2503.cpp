@@ -14,7 +14,6 @@ int main(){
             a = i/100;
             b = (i%100)/10;
             c = (i%10);
-
             if(a==b||a==c||b==c)arr[i]=1;
             if(a==0||b==0||c==0)arr[i]=1;
         }
@@ -36,11 +35,11 @@ int main(){
             return 0;
         }else if(s==2){
             for(int i=112; i<1000; i++){
-                int f,s,t;
-                f = i/100;
-                s = (i%100)/10;
-                t = (i%10);
-                if((a==f&&b==s&&c!=t)||(a==f&&b!=s&&c==t)||(a!=f&&b==s&&c==t)){
+                int aa,bb,cc;
+                aa = i/100;
+                bb = (i%100)/10;
+                cc = (i%10);
+                if((a==aa&&b==bb&&c!=cc)||(a==aa&&b!=bb&&c==cc)||(a!=aa&&b==bb&&c==cc)){
 
                 }else{
                     arr[i]=1;
@@ -49,11 +48,11 @@ int main(){
         }else if(s==1){
             if(ba==2){
                 for(int i=112; i<1000; i++){
-                    int f,s,t;
-                    f = i/100;
-                    s = (i%100)/10;
-                    t = (i%10);
-                    if((a==f&&b==t&&c==s)||(a==t&&b==s&&c==f)||(a==s&&b==f&&c==t)){
+                    int aa,bb,cc;
+                    aa = i/100;
+                    bb = (i%100)/10;
+                    cc = (i%10);
+                    if((a==aa&&b==cc&&c==bb)||(a==cc&&b==bb&&c==aa)||(a==bb&&b==aa&&c==cc)){
 
                     }else{
                         arr[i]=1;
@@ -61,11 +60,11 @@ int main(){
                 }
             }else if(ba==1){
                 for(int i=112; i<1000; i++){
-                    int f,s,t;
-                    f = i/100;
-                    s = (i%100)/10;
-                    t = (i%10);
-                    if((a==f&&b==t&&c!=s)||(a==f&&b!=t&&c==s)||(a!=t&&b==s&&c==f)||(a==t&&b==s&&c!=f)||(a==s&&b!=f&&c==t)||(a!=s&&b==f&&c==t)){
+                    int aa,bb,cc;
+                    aa = i/100;
+                    bb = (i%100)/10;
+                    cc = (i%10);
+                    if((a==aa&&b==cc&&c!=bb)||(a==aa&&b!=cc&&c==bb)||(a!=cc&&b==bb&&c==aa)||(a==cc&&b==bb&&c!=aa)||(a==bb&&b!=aa&&c==cc)||(a!=bb&&b==aa&&c==cc)){
 
                     }else{
                         arr[i]=1;
@@ -73,11 +72,11 @@ int main(){
                 }
             }else{
                 for(int i=112; i<1000; i++){
-                    int f,s,t;
-                    f = i/100;
-                    s = (i%100)/10;
-                    t = (i%10);
-                    if(((a==f&&b!=s&&c!=t)&&(a==f&&b!=t&&c!=s))||((a!=t&&b==s&&c!=f)&&(a!=f&&b==s&&c!=t))||((a!=f&&b!=s&&c==t)&&(a!=s&&b!=f&&c==t))){
+                    int aa,bb,cc;
+                    aa = i/100;
+                    bb = (i%100)/10;
+                    cc = (i%10);
+                    if(((a==aa&&b!=bb&&c!=cc&&b!=cc&&c!=bb))||((a!=cc&&b==bb&&c!=aa&&a!=aa&&c!=cc))||((a!=aa&&b!=bb&&a!=bb&&b!=aa&&c==cc))){
 
                     }else{
                         arr[i]=1;
@@ -87,11 +86,11 @@ int main(){
         }else if(s==0){
             if(ba==3){
                 for(int i=112; i<1000; i++){
-                    int f,s,t;
-                    f = i/100;
-                    s = (i%100)/10;
-                    t = (i%10);
-                    if((a==s&&b==f&&c==s)||(a==t&&b==t&&c==f)){
+                    int aa,bb,cc;
+                    aa = i/100;
+                    bb = (i%100)/10;
+                    cc = (i%10);
+                    if((a==cc&&b==aa&&c==bb)||(a==bb&&b==cc&&c==aa)){
 
                     }else{
                         arr[i]=1;
@@ -99,47 +98,25 @@ int main(){
                 }
             }else if(ba==2){
                 for(int i=112; i<1000; i++){
-                    int f,s,t;
-                    f = i/100;
-                    s = (i%100)/10;
-                    t = (i%10);
-                    if(a==s){
-                        if(b==f){
-                            if(c!=t){
+                    int aa,bb,cc;
+                    aa = i/100;
+                    bb = (i%100)/10;
+                    cc = (i%10);
+                    if(a==bb){
+                        if(b==aa){
+                            if(c!=cc){
 
                             }else{
                                 arr[i]=1;
                             }
-                        }else if(b==t){
-                            if(c!=f){
+                        }else if(b==cc){
+                            if(c!=aa){
 
                             }else{
                                 arr[i]=1;
                             }
-                        }else if(c==f){
-                            if(b!=t){
-
-                            }else{
-                                arr[i]=1;
-                            }
-                        }else{
-                            arr[i]=1;
-                        }
-                    }else if(a==t){
-                        if(b==f){
-                            if(c!=s){
-
-                            }else{
-                                arr[i]=1;
-                            }
-                        }else if(c==f){
-                            if(b!=s){
-
-                            }else{
-                                arr[i]=1;
-                            }
-                        }else if(c==s){
-                            if(b!=f){
+                        }else if(c==aa){
+                            if(b!=cc){
 
                             }else{
                                 arr[i]=1;
@@ -147,10 +124,138 @@ int main(){
                         }else{
                             arr[i]=1;
                         }
-                    }else if()
+                    }else if(a==cc){
+                        if(b==aa){
+                            if(c!=bb){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else if(c==aa){
+                            if(b!=bb){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else if(c==bb){
+                            if(b!=aa){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else{
+                            arr[i]=1;
+                        }
+                    }else if(b==aa){
+                        if(a==bb){
+                            if(c!=cc){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else if(a==cc){
+                            if(c!=bb){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else if(c==bb){
+                            if(a!=cc){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }
+                    }else if(b==cc){
+                        if(a==bb){
+                            if(c!=aa){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else if(c==aa){
+                            if(a!=bb){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else if(c==bb){
+                            if(a!=aa){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }
+                    }else if(c==aa){
+                        if(b==cc){
+                            if(a!=bb){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else if(a==bb){
+                            if(b!=cc){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else if(a==cc){
+                            if(b!=bb){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }
+                    }else if(c==bb){
+                        if(b==cc){
+                            if(a!=aa){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else if(b==aa){
+                            if(a!=cc){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }else if(a==cc){
+                            if(b!=aa){
+
+                            }else{
+                                arr[i]=1;
+                            }
+                        }
+                    }
                 }
             }else if(ba==1){
+                for(int i=112; i<1000; i++){
+                    int aa,bb,cc;
+                    aa = i/100;
+                    bb = (i%100)/10;
+                    cc = (i%10);
 
+                    if((a==bb&&b!=aa&&b!=cc&&c!=aa&&c!=cc)||(a==cc&&b!=aa&&b!=bb&&c!=aa&&c!=bb)||(b==aa&&a!=bb&&a!=cc&&c!=bb&&c!=cc)||(b==cc&&a!=aa&&a!=bb&&c!=aa&&c!=bb)||(c==aa&&a!=bb&&a!=cc&&b!=bb&&b!=cc)||(c==bb&&a!=aa&&a!=cc&&b!=aa&&b!=cc)){
+
+                    }else{
+                        arr[i]=1;
+                    }
+
+                }
+            }else if(ba==0){
+                for(int i=112; i<1000; i++){
+                    int aa,bb,cc;
+                    aa = i/100;
+                    bb = (i%100)/10;
+                    cc = (i%10);
+
+                    if((a!=aa&&a!=bb&&a!=cc&&b!=aa&&b!=bb&&b!=cc&&c!=aa&&c!=bb&&c!=cc)){
+
+                    }else{
+                        arr[i]=1;
+                    }
+
+                }
             }
         }
     }
@@ -159,7 +264,7 @@ int main(){
 
     for(int i=112; i<1000; i++){
         if(arr[i]==0){
-            cout<<i<<endl;
+            // cout<<i<<endl;
             count+=1;
         }
     }
