@@ -6,6 +6,9 @@ F11 도 디버깅
 push 하는 방법
 - git push -u origin
 
+//연구실 컴퓨터
+- git push origin HEAD:gnadi
+
 pull 하는 방법
 - git pull origin gnadi
 
