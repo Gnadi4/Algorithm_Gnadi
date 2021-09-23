@@ -3,6 +3,10 @@ ctl + alt + r 은 실행파일 실행
 F5 는 디버깅
 F11 도 디버깅
 
+ctl + alt + N : Coderunner를 이용한 실행
+
+coderunner 설정 변경에서 설정해야함
+
 push 하는 방법
 - git push -u origin
 
