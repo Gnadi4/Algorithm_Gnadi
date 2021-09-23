@@ -14,10 +14,12 @@ int main(){
     //     cout<<int(i)<<endl;
     // }
 
-    int arr[5] = {1,2,3,4,5};
-    int *tmp = arr;
+    // int arr[5] = {1,2,3,4,5};
+    // int *tmp = arr;
 
-    for(int i=0; i<5; i++)cout<<tmp[i]<<endl;
+    // for(int i=0; i<5; i++)cout<<tmp[i]<<endl;
+
+    cout<<"Hello World!"<<endl;
 
     return 0;
 }
