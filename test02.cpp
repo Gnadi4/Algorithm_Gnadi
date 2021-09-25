@@ -1,12 +1,22 @@
 #include <iostream>
+#include <stack>
 using namespace std;
 
 int main(){
 
-    int a;
-    cin>>a;
+    stack<int> l;
+    l.push(1);
 
-    cout<<a<<endl;
+    cout<<l.top()<<endl;
+
+    l.pop();
+
+    l.top();
+
+    // int a;
+    // cin>>a;
+
+    // cout<<a<<endl;
 
     // string s;
     // cin>>s;
