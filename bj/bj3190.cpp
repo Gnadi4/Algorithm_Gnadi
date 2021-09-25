@@ -20,7 +20,7 @@ int main(){
 
     for(int i=0; i<k; i++){
         int x,y;
-        cin>>x>>y;
+        cin>>y>>x;
 
         arr[x-1][y-1]=1;
     }
@@ -45,7 +45,7 @@ int main(){
 
     int j=0;
     //0 right 1 down 2 left 3 up
-    int status = 1;
+    int status = 0;
 
     while(true){
         //cout<<pos_x.front()<<' '<<pos_y.front()<<endl;
@@ -63,7 +63,7 @@ int main(){
             j+=1;
         }
 
-        if(status==2){
+        if(status==0){
             if(pos_x.front()+1>=n){
                 co+=1;
                 break;
@@ -75,6 +75,19 @@ int main(){
             }else{
                 pos_x.push_front(pos_x.front()+1);
                 pos_y.push_front(pos_y.front());
+                if(pos_x.size()>=4){
+                    list<int>::iterator iterx=pos_x.begin();
+                    list<int>::iterator itery=pos_y.begin();
+                    iterx++,itery++;
+                    for(;iterx!=pos_x.end();iterx++,itery++){
+                        //cout<<*iterx<<' '<<*itery<<' '<<pos_x.front()<<' '<<pos_y.front()<<endl;
+                        if(*iterx==pos_x.front() && *itery==pos_y.front()){
+                            co+=1;
+                            cout<<co<<endl;
+                            return 0;
+                        }
+                    }
+                }
                 pos_x.pop_back();
                 pos_y.pop_back();
             }
@@ -90,10 +103,23 @@ int main(){
             }else{
                 pos_x.push_front(pos_x.front());
                 pos_y.push_front(pos_y.front()+1);
+                if(pos_x.size()>=4){
+                    list<int>::iterator iterx=pos_x.begin();
+                    list<int>::iterator itery=pos_y.begin();
+                    iterx++,itery++;
+                    for(;iterx!=pos_x.end();iterx++,itery++){
+                        //cout<<*iterx<<' '<<*itery<<' '<<pos_x.front()<<' '<<pos_y.front()<<endl;
+                        if(*iterx==pos_x.front() && *itery==pos_y.front()){
+                            co+=1;
+                            cout<<co<<endl;
+                            return 0;
+                        }
+                    }
+                }
                 pos_x.pop_back();
                 pos_y.pop_back();
             }
-        }else if(status==0){
+        }else if(status==2){
             if(pos_x.front()-1<0){
                 co+=1;
                 break;
@@ -105,6 +131,19 @@ int main(){
             }else{
                 pos_x.push_front(pos_x.front()-1);
                 pos_y.push_front(pos_y.front());
+                if(pos_x.size()>=4){
+                    list<int>::iterator iterx=pos_x.begin();
+                    list<int>::iterator itery=pos_y.begin();
+                    iterx++,itery++;
+                    for(;iterx!=pos_x.end();iterx++,itery++){
+                        //cout<<*iterx<<' '<<*itery<<' '<<pos_x.front()<<' '<<pos_y.front()<<endl;
+                        if(*iterx==pos_x.front() && *itery==pos_y.front()){
+                            co+=1;
+                            cout<<co<<endl;
+                            return 0;
+                        }
+                    }
+                }
                 pos_x.pop_back();
                 pos_y.pop_back();
             }
@@ -120,26 +159,26 @@ int main(){
             }else{
                 pos_x.push_front(pos_x.front());
                 pos_y.push_front(pos_y.front()-1);
+                if(pos_x.size()>=4){
+                    list<int>::iterator iterx=pos_x.begin();
+                    list<int>::iterator itery=pos_y.begin();
+                    iterx++,itery++;
+                    for(;iterx!=pos_x.end();iterx++,itery++){
+                        //cout<<*iterx<<' '<<*itery<<' '<<pos_x.front()<<' '<<pos_y.front()<<endl;
+                        if(*iterx==pos_x.front() && *itery==pos_y.front()){
+                            co+=1;
+                            cout<<co<<endl;
+                            return 0;
+                        }
+                    }
+                }
                 pos_x.pop_back();
                 pos_y.pop_back();
             }
         }
-
-        //cout<<"this is pos_x size:"<<pos_x.size()<<endl;
-        cout<<endl;
-        if(pos_x.size()>=4){
-            list<int>::iterator iterx=pos_x.begin();
-            list<int>::iterator itery=pos_y.begin();
-            iterx++,itery++;
-            for(;iterx!=pos_x.end();iterx++,itery++){
-                cout<<*iterx<<' '<<*itery<<' '<<pos_x.front()<<' '<<pos_y.front()<<endl;
-                if(*iterx==pos_x.front() && *itery==pos_y.front()){
-                    co+=1;
-                    break;
-                }
-            }
-        }
-
+        // cout<<"this is pos_x size:"<<pos_x.size()<<endl;
+        // cout<<endl;
+        
         co+=1;
     }
 
