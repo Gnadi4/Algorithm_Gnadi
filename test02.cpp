@@ -1,17 +1,29 @@
 #include <iostream>
-#include <stack>
+#include <string>
+
 using namespace std;
 
 int main(){
 
-    stack<int> l;
-    l.push(1);
+    string s1,s2;
 
-    cout<<l.top()<<endl;
+    s1="abc";
+    s2="bb";
 
-    l.pop();
+    if(s1.compare('a'+s2))cout<<"same"<<endl;
 
-    l.top();
+    // getline(cin, s);
+    
+    // for(int i=0; i<s.size(); i++)if(s[i]!=' ')cout<<s[i]<<endl;
+
+    // stack<int> l;
+    // l.push(1);
+
+    // cout<<l.top()<<endl;
+
+    // l.pop();
+
+    // l.top();
 
     // int a;
     // cin>>a;
