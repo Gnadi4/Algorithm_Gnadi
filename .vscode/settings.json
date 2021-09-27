@@ -6,6 +6,7 @@
         "iosfwd": "cpp",
         "stack": "cpp",
         "istream": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "deque": "cpp"
     }
 }

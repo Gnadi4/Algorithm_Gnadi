@@ -29,14 +29,27 @@ int main(){
 
     long long result=0;
 
-    for(int i=0; i<n; i++){
-        arr.push(q.front());
-        q.pop();
-        if(arr.size()>k)arr.pop();
-        for(int j=0; j<arr.size(); j++){
-            if(arr.front()==q.front())result+=1;
-            arr.push(arr.front());
-            arr.pop();
+    for(int i=0; i<21; i++){
+        if(q[i].empty()){
+
+        }else{
+            queue<int> tmp;
+            long long cnt=0;
+            while(!q[i].empty()){
+                if(tmp.empty()){
+                    tmp.push(q[i].front());
+                    q[i].pop();
+                }else{
+                    if(q[i].front()-tmp.front()<=k){
+                        tmp.push(q[i].front());
+                        q[i].pop();
+                        cnt+=tmp.size()-1;
+                    }else{
+                        tmp.pop();
+                    }
+                }
+            }
+            result+=cnt;
         }
     }
 
