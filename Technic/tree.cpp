@@ -3,34 +3,42 @@
 using namespace std;
 
 struct node{
-    int val=-1;
-    node* parent;
-    node* child;
+    int val;
+    node* left;
+    node* right;
 };
 
+void print_preorder(){
+
+}
+
+void print_inorder(){
+
+}
+
+void print_postorder(){
+
+}
+
 void func(node* root){
-    node* a;
-    (*root).child = a;
-    a->val=3;
-    // a->val=2;
-    // cout<<3<<endl;
-    // cout<<a->val<<endl;
-    // root->child=a;
+    node* tmp = new node();
+    root->left=tmp;
+    tmp->val=2;
+    // root.right->val=3;
+    return;
 }
 
 int main(){
 
-    node* root;
-    root->val=1;
-    // node a;
+    node* root=new node;
 
-    // root.child.push_back(&a);
-    // cout<<root.child[0]->val<<endl;;
+    root->val=1;
 
     func(root);
 
     cout<<root->val<<endl;
-    cout<<root->child->val<<endl;
+    cout<<root->left->val<<endl;
+    // cout<<root->right->val<<endl;
 
     return 0;
 }
