@@ -5,12 +5,14 @@ using namespace std;
 
 int main(){
 
-    string s1,s2;
+    char s1='A';
 
-    s1="abc";
-    s2="bb";
+    cout<<int(s1)<<endl;
 
-    if(s1.compare('a'+s2))cout<<"same"<<endl;
+    // s1="abc";
+    // s2="bb";
+
+    // if(s1.compare('a'+s2))cout<<"same"<<endl;
 
     // getline(cin, s);
     

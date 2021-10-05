@@ -9,5 +9,5 @@
         "queue": "cpp",
         "deque": "cpp",
         "vector": "cpp"
-    }
+    },
 }
