@@ -38,14 +38,10 @@ int main(){
         string s;
         cin>>s;
 
-        if(s.size()==1){
-            if(isdigit(s[0])){
-                cout<<arr[stoi(s)]<<endl;
-            }else{
-                cout<<ma.find(s)->second<<endl;
-            }
+        if(isdigit(s[0])){
+            cout<<arr[stoi(s)]<<'\n';
         }else{
-            cout<<ma.find(s)->second<<endl;
+            cout<<ma.find(s)->second<<'\n';
         }
     }
 
@@ -54,7 +50,7 @@ int main(){
 
 
 /*
-26 5
+26 1
 Bulbasaur
 Ivysaur
 Venusaur
