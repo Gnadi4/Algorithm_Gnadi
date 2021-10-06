@@ -5,9 +5,12 @@ using namespace std;
 
 int main(){
 
-    char s1='A';
+    int arr[3] = {1,2,3};
 
-    cout<<int(s1)<<endl;
+    string s1="11";
+    int a = stoi(s1);
+
+    cout<<a<<endl;
 
     // s1="abc";
     // s2="bb";
