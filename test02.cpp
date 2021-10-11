@@ -5,12 +5,18 @@ using namespace std;
 
 int main(){
 
-    int arr[3] = {1,2,3};
+    string a,b;
+    a="abc";
+    b="abd";
 
-    string s1="11";
-    int a = stoi(s1);
+    if(a==b)cout<<1<<endl;
 
-    cout<<a<<endl;
+    // int arr[3] = {1,2,3};
+
+    // string s1="11";
+    // int a = stoi(s1);
+
+    // cout<<a<<endl;
 
     // s1="abc";
     // s2="bb";
