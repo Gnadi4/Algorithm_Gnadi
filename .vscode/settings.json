@@ -15,6 +15,7 @@
         "__split_buffer": "cpp",
         "list": "cpp",
         "string": "cpp",
-        "__functional_base": "cpp"
+        "__functional_base": "cpp",
+        "functional": "cpp"
     },
 }
